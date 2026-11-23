@@ -1,0 +1,312 @@
+/*	-----------------------------------
+ * 	Styles for CumulusMX Templates
+ Last modified: 2025/11/21 10:28:43
+ * 	----------------------------------*/
+
+html, body, p, h1, h2, h3, h4, h5, h6, li, td, th {
+	font-family: 'Rosario', sans-serif;
+}
+
+p {
+	font-size: 15px;
+}
+
+#Header {
+	border-style: solid;
+	border-width: 0 0 10px 0;
+}
+
+.site-width {
+	max-width:1140px;
+	margin:auto;
+}
+
+.graph-width {
+	max-width:1250px;
+	margin:auto;
+}
+
+#Footer {
+	border-width:5px 0 0 0;
+	border-style: solid;
+}
+
+.logo {
+	max-width:250px;
+	margin: 5px 0 5px 16px;
+}
+
+.subText {
+	font-size: 80% !important;
+	font-weight:400;
+}
+
+body {
+	background-image: url('../images/picture.jpg');
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.statusPanel h5 {
+	margin-bottom: -5px;
+}
+/*	-------------------------------------
+ * 	Flex boxes
+ * 	-------------------------------------*/
+.at-flex-start { display:flex;}
+.at-flex-end   {
+	display:flex;
+	justify-content: flex-end;
+	flex-wrap:wrap;
+}
+
+.at-flex-justify {
+	display:flex;
+	justify-content: space-around;
+	flex-wrap:wrap;
+}
+
+.at-flex-between {
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+}
+
+.at-flex-bottom,
+.at-flex-items-bottom {
+	align-items: flex-end;
+}
+
+.at-flex-items-center {
+	align-items: center;
+}
+
+/*	--------------------------------------------------
+ * 	Menu enhancements
+ * 	--------------------------------------------------*/
+#Main_Menu {
+	margin-bottom: 4px;
+	border-width:2px 0 0 0 ;
+	border-style: solid;
+	min-height: 32px;
+}
+
+.at-slim {
+	padding: 4px 14px!important;
+}
+
+.at-divider {
+	margin: 0 5px;
+	color:#F80;
+}
+
+.at-spacer {
+    min-height:2em;
+}
+
+.at-menu-lable {
+	display:block;
+	width:100%;
+	font-size: 13px;
+	font-style: italic;
+	padding-bottom: 2px!important;
+	padding-top:4px!important;
+	border-bottom: 1px dotted #c2cfa5!important;
+}
+
+.at-menu-bar {
+	display:block;
+	height: 2px;
+	padding: 0 2px!important;
+}
+
+.at-indent {
+	padding-left: 40px!important;
+}
+
+/*	-------------------------------
+ * 	Model enhancements
+ * 	------------------------------*/
+
+.w3-modal-content {
+	margin-top:10%;
+	border-radius: 8px;
+}
+
+.w3-modal header { border-radius: 8px 8px 0 0;}
+.w3-modal footer { border-radius: 0 0 8px 8px;}
+.w3-modal .w3-btn { border-radius: 0 8px;}
+
+/* 	----------------------------------------
+ * 	Media enhancements
+ * 	---------------------------------------*/
+@media screen and (max-width:780px) {
+	#Footer { position: unset; }
+	#Content {
+		/*margin-top: 170px!important;*/
+		margin-bottom: 5px!important;
+	}
+
+	.statusPanel {
+		text-align:center!important;
+		margin:auto!important;
+	}
+}
+
+@media screen and (max-height:768px) {
+	#Footer { position: unset;}
+	#Content {
+		margin-bottom: 5px!important;
+	}
+}
+
+/*	--------------------------------------
+ * 	LED enhancements
+ * 	-------------------------------------*/
+.at-led-round {
+	display:inline-block;
+	height: 1.2em;
+	width: 1.2em;
+	margin: 0 0.5em -3px 0.5em;
+	border-radius: 50%;
+	background-color: #888;
+	box-shadow: inset 3px 3px 2px rgba(220, 220, 220, 0.6), inset -2px -2px 2px rgba(32, 32, 32,0.6);
+}
+
+.at-led-block {
+	display:inline-block;
+	height: 1.2em;
+	width: 1.2em;
+	margin: 0 0.5em -3px 0.5em;
+	background-color: #888;
+	box-shadow: inset 3px 3px 2px rgba(220, 220, 220, 0.6), inset -2px -2px 2px rgba(32, 32, 32,0.6);
+}
+
+.at-led-brick {
+	display:inline-block;
+	height:0.8em;
+	width:1.6em;
+	margin:0 0.5em -3px 0.5em;
+	background-color: #888;
+	box-shadow: inset 3px 3px 2px rgba(220, 220, 220, 0.6), inset -2px -2px 2px rgba(32, 32, 32,0.6);
+}
+.at-led-oval {
+	display:inline-block;
+	height:1em;
+	width:2em;
+	margin:0 0.5em -3px 0.5em;
+	border-radius: 50%;
+	background-color: #888;
+	box-shadow: inset 3px 3px 2px rgba(220, 220, 220, 0.6), inset -2px -2px 2px rgba(32, 32, 32,0.6);
+}
+
+.at-led-green {
+	background-color: #0b0;
+}
+
+.at-led-flash-red {
+	animation: flashR 1s infinite;
+}
+
+@keyframes flashR {
+	0%, 60%  {background-color: #f00;}
+	61%,100% {background-color: #800;}
+}
+
+/* 	----------------------------------------
+ * 	gauges
+ * 	---------------------------------------*/
+.at-gaugeSmall h5 {
+	text-align: center;
+}
+
+/* 	----------------------------------------
+ * 	ChartJS stuff
+ * 	---------------------------------------*/
+#chartcontainer  {
+	height: 600px;
+	width: 100%;
+	margin-top:16px;
+	margin-bottom: 16px;
+	background: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.chart-buttons {
+	height: 25px;
+	font-size: 12px;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.chart-buttons button {
+	margin: 0 0 0 5px;
+	height: 25px;
+	font-size: 12px;
+	flex: 0 1 auto;
+}
+
+.chart-buttons-column {
+	display: flex;
+}
+
+.mainChartContainer {
+	position: relative;
+	flex: 1 1 auto;
+}
+
+.navChartContainer {
+	height: 90px;
+	margin-top: 10px;
+	position: relative;
+	flex: 0 1 auto;
+}
+
+#navChart {
+	touch-action: none;
+}
+
+.graphs-width {
+	max-width:1250px;
+	margin: auto
+}
+
+@media (max-width: 650px) {
+	figure { margin-left: 0; margin-right: 0 }
+	.w3-panel { padding-left: 5px; padding-right: 5px}
+	.w3-col.s12 {padding-left: 0; padding-right: 0; }
+}
+
+.spinner-container {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #adadad;
+}
+
+/* Define styles for the spinner */
+.spinner {
+    display: inline-block;
+    aspect-ratio: 1 / 1;            /* keep it square */
+    padding: 2rem;               /* controls overall size */
+    box-sizing: border-box;         /* include border/padding in layout */
+    border: 7px solid #968f8f;
+    border-radius: 50%;
+    border-top-color: blue;         /* Color for the spinning part */
+    animation: spin 2s linear infinite;
+}
+
+/* Define keyframe animation for spinning */
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
